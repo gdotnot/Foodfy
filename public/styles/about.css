@@ -1,14 +1,17 @@
-.content h2 {
+.content-paragraphs {
+    margin: 0 6%;
+}
+
+.content-paragraphs h2 {
     font-size: 24px;
     margin-bottom: 24px;
 }
-
-.content h3 {
+.content-paragraphs h3 {
     font-size: 20px;
     margin-bottom: 20px;
 }
 
-.content p {
+.content-paragraphs p {
     margin-bottom: 32px;
     font-size: 18px;
     line-height: 24px;

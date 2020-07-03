@@ -1,62 +1,70 @@
 @import "https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap";
 
+:root {
+    --color-pink: #FBDFDB;
+}
+
 * {
     margin: 0;
     border: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+  min-height: 100vh;
+  width: 100%;
 }
 
 body {
     font-family: "Roboto", sans-serif;
     color: #25282B;
-    height:100%;
-    width: 100%;
- }
+}
 
 .container {
-    width: 90%;
-    max-width: 980px;
     margin: auto;
     display: flex;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
 header {
-    width: 400px;
-    display: flex;
-    justify-content: space-between;
-    margin: 36px 0;
+    background-color: var(--color-pink);
+    width: 100%;
+    margin-bottom: 32px;
 }
 
-#selected {
-    font-weight: bold;
+nav {
+  max-width: 940px;
+  height: 90px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-header nav {
-    display: flex;
-    align-items: center;
+.menu a {
+  color: black;
+  margin-left: 20px;
+  text-decoration: none;
+  opacity: 0.8;
+  font-size: 18px;
 }
 
-header nav li {
-    margin-right: 30px;
-    list-style-type: none;
-}
-
-header nav li a {
-    opacity: 0.8;
-    text-decoration: none;
-    color: #111111;
-    font-size: 16px;
-}
-
-header nav li a:hover {
+.menu a:hover {
     opacity: 1;
+    font-weight: 400;
+}
+
+.content {
+    max-width: 80%;
+    margin: 3% auto;
 }
 
 .content-wrapper {
     width: 100%;
-    background-color: #FBDFDB;
+    background-color: var(--color-pink);
     border-radius: 30px;
     align-items: center;
     justify-content: space-between;
@@ -93,6 +101,7 @@ header nav li a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
+    margin-bottom: 3%;
 }
 
 .cards h2 {
@@ -100,8 +109,12 @@ header nav li a:hover {
     margin-top: 50px;
 }
 
+.card {
+    cursor: pointer;
+}
+
 .card img {
-    border-radius: 15px;
+    border-radius: 15px 15px 0 0;
     width: 300px;
     height: 140px;
 }
@@ -117,17 +130,35 @@ header nav li a:hover {
     color: #777777;
     font-size: 14px;
 }
+.card:hover {
+    transform: translateY(-7px);
+    cursor: pointer;
+    transition: ease 100ms;
+    background-color: #dddcdc;
+    border-radius: 15px;
+}
+
+.card-info {
+    margin: 0 0 10px 10px;
+}
 
 footer {
-    width: auto;
+    width: 100%;
     text-align: center;
     background-color: #EEEEEE;
     padding: 28px;
-    margin-top: 50px;
+    margin-top: auto;
     /* position: fixed; */
 }
 
 footer p {
     color: #999999;
     font-size: 14px;
+}
+
+.selected {
+    font-weight: bold;
+    padding: 0 20px;
+    border: 1px solid black;
+    border-radius: 15px;
 }

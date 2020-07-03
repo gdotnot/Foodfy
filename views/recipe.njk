@@ -1,0 +1,60 @@
+{% extends "layout.njk" %}
+
+    {% block title %}
+        <title>Receita - {{ item.title }}</title>
+    {% endblock title %}
+
+    {% block styles %}
+        <link rel="stylesheet" href="/styles/recipe.css">
+    {% endblock styles %}
+
+    {% block content %}
+        <section class="cards">
+                <div class="card-presentation">
+                    <img src="{{ item.image }}" alt="Imagem de {{ item.title }}">
+                    <div class="card-info">
+                        <h4>{{ item.title }}</h4>
+                        <p>por {{ item.author }}</p>
+                    </div>
+                </div>
+                <div class="card-recipe ingredients">
+                    <div class="titles">
+                        <h1>Ingredientes</h1>
+                        <a class="card-hide" id="0">Esconder</a>
+                    </div>
+                    <div class="elements">
+                        <ul>
+                        {% for ingredient in item.ingredients %}
+                            <li>{{ ingredient }}</li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="card-recipe preparation">
+                    <div class="titles">
+                        <h1>Modo de Preparo</h1>
+                        <a class="card-hide" id="1">Esconder</a>
+                    </div>
+                    <div class="elements">
+                        <ol>
+                        {% for direction in item.preparation %}
+                            <li>{{ direction }}</li>
+                        {% endfor %}
+                        </ol>
+                    </div>
+                </div>
+                <div class="card-recipe informations">
+                    <div class="titles">
+                        <h1>Inforamções adicionais</h1>
+                        <a class="card-hide" id="2">Esconder</a>
+                    </div>
+                    <div class="elements">
+                        <p>{{item.information}}</p>
+                    </div>
+                </div>
+        </section>
+    {% endblock content %}
+
+    {% block scripts %}
+        <script src="/scripts/recipes.js"></script>
+    {% endblock scripts %}

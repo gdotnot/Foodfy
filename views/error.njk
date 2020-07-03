@@ -1,0 +1,25 @@
+{% extends "layout.njk" %}
+
+{% block title %}
+    <title>Erro - Página não encontrada</title>
+{% endblock title %}
+
+{% block styles %}
+    <link rel="stylesheet" href="/styles/error.css">
+    <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:wght@500&display=swap" rel="stylesheet">
+{% endblock styles %}
+
+{% block content %}
+<div class="error">
+    <div class="code">
+        <h1>404</h1>
+    </div>
+    <div class="error-description">
+        <h2>ERRO</h2>
+        <p>Página não encontrada</p>
+    </div>
+    <div class="button-recipes">
+        <a href="/recipes">Receitas</a>
+    </div>
+</div>
+{% endblock content %}

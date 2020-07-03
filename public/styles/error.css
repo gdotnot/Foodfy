@@ -1,0 +1,39 @@
+@import "https://fonts.googleapis.com/css2?family=MuseoModerno:wght@500&display=swap";
+
+header {
+    margin: 0;
+}
+
+.error {
+    font-family: 'MuseoModerno', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.code {
+    width: 100%;
+    font-size: 90px;
+    color: var(--color-pink);
+}
+
+.error-description{
+   text-align: center;
+    font-size: 20px;
+    margin-bottom: 32px;
+}
+
+.error-description h2{
+    font-size: 42px;
+}
+
+.button-recipes a{
+    text-decoration: none;
+    color: black;
+    background-color: var(--color-pink);
+    padding: 10px 25px;
+    border-radius: 20px;
+}
+
+.button-recipes a:hover {
+    border: 1px solid black;
+}
