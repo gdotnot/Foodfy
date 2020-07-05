@@ -18,8 +18,7 @@
 </p>
 
 # ![Foodfy](public/assets/logo.png)
-![Foodfy](images/foodfy.gif)
-
+![Foodfy](images/Foodfy.gif)F
 # :bookmark_tabs: Index
 
   - [:clipboard: About](#clipboard-about)
