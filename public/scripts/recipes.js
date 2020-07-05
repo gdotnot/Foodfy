@@ -2,7 +2,6 @@ const cards = document.querySelectorAll(".card")
 const cardRecipe = document.querySelectorAll(".card-recipe")
 
 
-
 for (let index = 0; index < cards.length; index++) {
     cards[index].addEventListener("click", () => {
         window.location.href = `/recipes/${ index }`
