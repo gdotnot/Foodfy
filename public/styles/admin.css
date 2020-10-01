@@ -1,0 +1,12 @@
+header {
+  background-color: #000000;
+}
+
+header .logo {
+    max-width: 940px;
+    height: 90px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

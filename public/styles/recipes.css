@@ -1,0 +1,44 @@
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 3%;
+}
+
+.cards h2 {
+  grid-column: span 3;
+  margin-top: 50px;
+}
+
+.card {
+  cursor: pointer;
+}
+
+.card img {
+  border-radius: 15px 15px 0 0;
+  width: 300px;
+  height: 140px;
+}
+
+.card h4{
+  margin-top: 20px;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.card p {
+  margin-top: 5px;
+  color: #777777;
+  font-size: 14px;
+}
+.card:hover {
+  transform: translateY(-7px);
+  cursor: pointer;
+  transition: ease 100ms;
+  background-color: #dddcdc;
+  border-radius: 15px;
+}
+
+.card-info {
+  margin: 0 0 10px 10px;
+}

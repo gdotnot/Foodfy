@@ -1,0 +1,27 @@
+{% extends "users/layout.njk" %}
+
+    {% block title %}
+        <title>Receitas - Foodfy</title>
+    {% endblock title %}
+
+    {% block styles %}
+        <link rel="stylesheet" href="/styles/recipes.css">
+    {% endblock styles %}
+
+    {% block content %}
+        <section class="cards">
+            {% for recipe in recipes %}
+                <div class="card">
+                    <img src="{{ recipe.image }}" alt="Imagem de {{ recipe.name }}">
+                    <div class="card-info">
+                        <h4>{{ recipe.title }}</h4>
+                        <p>{{ recipe.author }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </section>
+    {% endblock content %}
+
+    {% block scripts %}
+        <script src="/scripts/recipes.js"></script>
+    {% endblock scripts %}

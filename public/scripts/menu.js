@@ -1,13 +1,9 @@
 const menu = document.querySelectorAll(".menu a")
-const path = window.location.pathname
+const path = location.pathname
 
+  for (link of menu) {
+      if (path.includes(link.getAttribute('href'))) {
+          link.classList.add("selected")
+      }
+  }
 
-
-window.onload = () => {
-    for (link of menu) {
-        const linkPath = link.getAttribute("href")
-        if (path == linkPath) {
-            link.classList.add("selected")
-        }
-    }
-}
